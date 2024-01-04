@@ -292,3 +292,26 @@ main .text-container {
         width: 0rem;
     }
 }
+
+@media (max-width: 407px) {
+    .home-text h1 {
+        word-wrap: break-word;
+        font-size: 2.8rem;
+    }
+
+    .start-section main  {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 50% 35%;
+    }
+    .container-img {
+        width: 92%;
+        margin: 2rem 0 0 1rem;
+    }
+    /* imagen */
+    .container-img img {
+        transform: unset;
+        height: auto;
+    }
+}
