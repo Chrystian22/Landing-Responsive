@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
+:root {
+    --Raleway: 'Raleway', sans-serif;
+    --Playfair: 'Playfair Display', serif;
+    --color-green: #4BA87D;
+    --color-black: #000;
+}
+/***** Sección principal *****/
+.top-categories{
+    font-family: var(--Raleway);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -4rem;
+    margin-bottom: 3rem;
+}
+    /* Contenedor de las cartas */
+.container-categories{
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+    /* Contenedor de las 3 cartas */
+.card-category{
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 5;
+}
+    /* Hover de las cartas */
+.card-category:hover{
+    transform: scale(1.1);
+}
+    /* Estilo de las imagenes de las cartas */
+.card-category img{
+    width: 100%;
+    max-height: 300px;
+}
+    /* Titulo principal de las cartas */
+.card-category .name{
+    width: 100%;
+    padding: 0 0 3rem 1rem;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+    /* Parrafo de las cartas */
+.card-category .desc{
+    padding: 0 0 1rem 1rem;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+@media (max-width:768px) {
+
+    /***** Sección principal *****/
+    .top-categories{
+        margin-top: -7rem;
+        margin-bottom: 3rem;
+    }
+        /* Contenedor de las cartas */
+    .container-categories{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+        /* Contenedor de las 3 cartas */
+    .card-category{
+        height: 9rem;
+    }
+        /* Hover de las cartas */
+    .card-category:hover{
+        transform: scale(1.05);
+    }
+        /* Estilo de las imagenes de las cartas */
+    .card-category img{
+        width: unset;
+        width: 100%;
+        max-height: 300px;
+    }
+        /* Titulo principal de las cartas */
+    .card-category .name{
+        color: #fff;
+        font-weight: 900;
+        padding-top: 5rem;
+        padding-right: 7rem;
+    }
+        /* Parrafo de las cartas */
+    .card-category p{
+        font-size: .8rem;
+        font-weight: 500;
+        padding-right: 4rem;
+    }
+}
+
+@media (max-width:430px) {
+    /***** Sección principal *****/
+    .top-categories{
+        font-family: var(--Raleway);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -7rem;
+        margin-bottom: 3rem;
+    }
+        /* Contenedor de las cartas */
+    .container-categories{
+        width: 70%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+        /* Contenedor de las 3 cartas */
+    .card-category{
+        height: 12rem;
+    }
+        /* Estilo de las imagenes de las cartas */
+    .card-category img{
+        width: unset;
+        height: 100%;
+        max-height: 300px;
+    }
+        /* Titulo principal de las cartas */
+    .card-category .name{
+        padding-top: 6rem;
+        padding-right: 8rem;
+        font-size: 2rem;
+    }
+        /* Parrafo de las cartas */
+    .card-category p{
+        padding-right: 8rem;
+    }
+}

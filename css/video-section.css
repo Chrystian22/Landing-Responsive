@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
+:root {
+    --Raleway: 'Raleway', sans-serif;
+    --Playfair: 'Playfair Display', serif;
+    --color-green: #4BA87D;
+    --color-gray: #f4f4f4;
+}
+    /* Sección inicial */
+.video-container {
+    width: 100%;
+    height: 43rem;
+    margin-top: 6rem;
+    background-color: var(--color-gray);
+    position: relative;
+}  
+    /* Iamgen Slash Negro*/
+.video-section .slash img {
+    position: absolute;
+    width: 70%;
+    z-index: 1;
+    transform: translate(-75%, -15%);
+    clip-path: polygon(0 12%, 100% 12%, 100% 100%, 0% 100%);
+}
+    /* Contenedor de video-section */
+.video-container .video-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    /* Contenedor de imagen */
+.video-container .video-img {
+    margin-top: 9rem;
+    z-index: 2;
+}
+    /* Estilo de la imagen */
+.video-container .video-img img {
+    width: 100%;
+    height: 31.5rem;
+}
+    /* Contenedor del titulo*/
+.reach-more {
+    position: absolute;
+    color: #fff;
+    font-family: var(--Playfair);
+    font-weight: 900;
+    font-size: 2.4rem;
+    z-index: 3;
+}
+    /* Contenedor del boton */
+.learn-button {
+    position: absolute;
+    margin-top: 18rem;
+    z-index: 46;
+}
+    /* Estilo del boton */
+.learn-button button {
+    width: 12.5rem;
+    height: 4rem;
+    background-color: #fff;
+    border: solid #fff;
+    color: var(--color-green);
+    font-family: var(--Raleway);
+    font-weight: 900;
+    font-size: 1.3rem;
+    line-height: 1.5625rem;
+    letter-spacing: 0.06563rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+    /* Hover del boton */
+.learn-button button:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+        /* Sección inicial */
+    .video-container {
+        width: 100%;
+        height: 36rem;
+        display: flex;
+        justify-content: center;
+    }
+        /* Iamgen Slash Negro*/
+    .video-section .slash img {
+        height: 23rem;
+        transform: translate(-75%, -30%);
+    }
+        /* Contenedor de video-section */
+    .video-container .video-section {
+        width: 90%;
+    }
+        /* Contenedor de imagen */
+    .video-container .video-img {
+        margin-top: unset;
+    }
+        /* Estilo de la imagen */
+    .video-container .video-img img {
+        width: 100%;
+        height: auto;
+    }
+        /* Contenedor del titulo*/
+    .reach-more {
+        margin-bottom: 5rem;
+        font-size: 2rem;
+    }
+        /* Contenedor del boton */
+    .learn-button {
+        margin-top: 6rem;
+    }
+        /* Estilo del boton */
+    .learn-button button {
+        width: 10.5rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 650px) {
+        /* Sección inicial */
+    .video-container {
+        height: 23rem; /* Ajustar altura */
+    }
+}
+@media (max-width: 430px) {
+        /* Sección inicial */
+    .video-container {
+        width: 100%;
+        height: 20rem;
+        margin-top: unset;
+    }
+        /* Iamgen Slash Negro*/
+    .video-section .slash img {
+        height: 23rem;
+        transform: translate(-75%, -30%);
+    }
+        /* Contenedor de video-section */
+    .video-container .video-section {
+        padding-top: 0rem;
+        width: 100%;
+        height: auto;
+    }
+    /* Estilo de la imagen */
+    .video-container .video-img img {
+        width: 100%;
+        height: auto; /* Elimina la altura fija */
+    }
+        /* Contenedor del titulo*/
+    .reach-more {
+        margin-top: unset;
+        font-size: 1.5rem;
+    }
+        /* Contenedor del boton */
+    .learn-button {
+        margin-top: 4rem;
+    }
+        /* Estilo del boton */
+    .learn-button button {
+        width: 8.5rem;
+        height: 2.5rem;
+        font-size: .7rem;
+    }
+}
