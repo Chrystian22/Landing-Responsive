@@ -255,7 +255,6 @@
     }
     /* Contenedor de la sección */
     .form-container{
-        overflow: hidden;
         margin-top: 0rem;
         width: 80%;
         height: auto;
