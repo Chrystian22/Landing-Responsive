@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
+:root {
+    --Raleway: 'Raleway', sans-serif;
+    --Playfair: 'Playfair Display', serif;
+    --color-green: #4BA87D;
+    --color-black: #000;
+}
+
+.start-section{
+    display: flex;
+    justify-content: center;
+    height: 25rem;
+}
+
+.start-section main {
+    width: 90%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "text-container img-container"
+        "info-container img-container"
+    ;
+}
+
+/***** Contenedor textos ******/
+main .text-container {
+    grid-area: text-container;
+    margin-left: 6rem;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 1;
+}
+/* Titulo principal */
+.home-text h1 {
+    font-family: var(--Playfair);
+    font-weight: 900;
+    font-size: 4rem;
+    color: var(--color-black);
+}
+
+/***** Contenedor de info y botones ******/
+.info-container{
+    grid-area: info-container;
+    margin-left: 6rem;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 1;
+}
+
+/* Parrafo */
+.home-info h4 {
+    font-family: var(--Raleway);
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--color-black);
+}
+
+/* Botones de la portada */
+.home-buttons {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.home-buttons button {
+    width: 13.5rem;
+    height: 4.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: var(--Raleway);
+    font-weight: 900;
+}
+
+.home-buttons .try {
+    font-size: 1.3rem;
+    color: #fff;
+    background-color: var(--color-green);
+    border: solid 0.3rem var(--color-green);
+}
+
+.home-buttons .get {
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: var(--color-green);
+    background: #fff;
+    border: solid 0.3rem var(--color-green);
+}
+
+.home-buttons .try:hover,
+.get:hover {
+    transform: scale(1.1);
+}
+
+/***** Contenedor imagen *****/
+.container-img {
+    grid-area: img-container;
+    z-index: 0;
+    width: 100%;
+    max-height: 100%;
+}
+
+.container-img img {
+    transform: translate(-10%);
+    max-width: 100%;
+    height: auto;
+    -webkit-box-shadow: 0px 1px 18px 0px rgba(214, 214, 214, 1);
+    -moz-box-shadow: 0px 1px 18px 0px rgba(214, 214, 214, 1);
+    box-shadow: 0px 1px 18px 0px rgba(214, 214, 214, 1);
+}
+
+/* Figuras en el background */
+.square img {
+    position: absolute;
+    width: 3.5rem;
+    transform: rotate(45deg);
+    transform: translate(290%, 700%);
+    z-index: 1;
+}
+
+/*** Media querie para tablet ***/
+@media (max-width: 768px) {
+
+    /* Inicio */
+    .start-section{
+        justify-content: flex-start;
+        height: 17rem;
+    }
+    .start-section main {
+        width: 100%;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /***** Text Container *****/
+    main .text-container {
+        grid-column-end: 3;
+        margin-left: 1rem;
+        width: 100%;
+        height: auto;
+    }
+    /* Titulo principal */
+    .home-text h1 {
+        font-size: 2.5rem;
+    }
+
+
+    /***** Contenedor de info y botones ******/
+    .info-container{
+        grid-column-end: 3;
+        grid-area: info-container;
+        margin-left: 1rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        z-index: 1;
+    }
+    .home-info h4 {
+        font-size: .8rem;
+    }
+    /* Botones de la portada */
+    .home-buttons {
+        margin-top: 0rem;
+        gap: 1.5rem;
+    }
+    .home-buttons button{
+        width: 8rem;
+        height: 2.8rem;
+    }
+    .home-buttons .try
+    ,.home-buttons .get {
+        font-size: .8rem;
+        border: solid 0.2rem var(--color-green);
+    }
+
+    /***** Contenedor imagen *****/
+    .container-img {
+        height: 100%;
+    }
+    .container-img img {
+        transform: translate(-10%);
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Figuras en el background */
+    .square img {
+        width: 2.5rem;
+        transform: translate(50%, 700%);
+    }
+
+}
+
+/* Media querie para mobile*/
+@media (max-width: 430px) {
+    
+    .start-section{
+        display: flex;
+        height: 30rem;
+    }
+    .start-section main  {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 35% 20% 35%;
+        grid-template-areas:
+            "text-container"
+            "img-container"
+            "info-container"
+        ;
+    }
+
+    /***** Contenedor textos ******/
+    main .text-container {
+        margin: 0rem;
+        padding: .5rem;
+        width: 100%;
+        gap: 1rem;
+    }
+    /* Titulo principal */
+    .home-text h1 {
+        word-wrap: break-word;
+        font-size: 3.2rem;
+    }
+
+    /***** Contenedor imagen *****/
+    .container-img {
+        width: 92%;
+        margin: -14rem 0 0 1rem;
+    }
+    /* imagen */
+    .container-img img {
+        transform: unset;
+        height: auto;
+    }
+
+    /***** Contenedor de info y botones ******/
+    .info-container{
+        padding: 1rem;
+        margin-left: unset;
+        width: 100%;
+        height: 10rem;
+        gap: 1.5rem;
+        z-index: 1;
+    }
+    .home-info h4 {
+        color: var(--color-black);
+        overflow-y: scroll;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        max-height: 4.4rem;
+        display: box;
+        text-overflow: ellipsis;
+        white-space: normal; 
+    }
+    
+    /* Botones de la portada */
+    .home-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 2rem;
+    }
+    
+    .home-buttons button {
+        width: 100%;
+        height: auto;
+        min-width: 10rem; /* Ancho mínimo */
+        min-height: 4rem; /* Altura mínima */
+        font-size: 1.5rem; /* Tamaño del texto */
+        flex-basis: auto; /* Ancho base */
+    }
+    .home-buttons .try
+    ,.home-buttons .get {
+        font-size: 1.1rem;
+    }
+    .square img {
+        width: 0rem;
+    }
+}
+
+@media (max-width: 407px) {
+    .start-section{
+        display: flex;
+        height: 40rem;
+    }
+    .home-text h1 {
+        word-wrap: break-word;
+        font-size: 2.8rem;
+    }
+
+    .start-section main  {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 40% 35%;
+    }
+    .container-img {
+        width: 92%;
+        margin: 2rem 0 0 1rem;
+    }
+    /* imagen */
+    .container-img img {
+        transform: unset;
+        height: auto;
+    }
+}
