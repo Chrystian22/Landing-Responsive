@@ -27,7 +27,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url(../assets/fg/green-back.png);
+    background-image: url(../assets/fg/green-back.webp);
     transform: skew(0deg, -10deg) translateY(-120px);
 }
     /* Imagen del Slash blanco */
